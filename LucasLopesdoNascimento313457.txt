@@ -1,0 +1,220 @@
+Lucas Lopes do Nascimento - 00313457
+
+  0   32 128   LDA 128 // carregando o n e testando se (n=1), caso seja x recebe 0 sem o programa nem rodar. 
+  2   48 139   ADD 139
+  4  160   8   JZ  8
+  6  128  13   JMP 13
+  8   32 140   LDA 140
+ 10   16 130   STA 130
+ 12  240       HLT  // x=0
+ 13   32 138   LDA 138
+ 15   16 131   STA 131
+ 17   32 138   LDA 138 // começa o loop da potência, usando 2 variáveis, onde a primeira recebe 1 e a segunda recebe B.
+ 19   16 132   STA 132
+ 21   32 132   LDA 132
+ 23  144  72   JN  72
+ 25  160  72   JZ  72 // testa se o auxiliar da potencia é > 0, caso não for, ele pula para fora do looping e dá o resultado.
+ 27   32 140   LDA 140
+ 29   16 133   STA 133
+ 31   32 129   LDA 129 // começa o loop da multiplicação, usando também duas variáveis, uma começando em 0 e a outra recebendo b.
+ 33   16 134   STA 134
+ 35   32 134   LDA 134
+ 37  144  55   JN  55
+ 39  160  55   JZ  55 // testa se o auxiliar da multiplicação é > 0, caso não for, ele pula para fora do looping da multiplicação e dá o
+ 41   32 133   LDA 133           resultado da potência.
+ 43   48 131   ADD 131	// usando o auxiliar para somar B vezes  1, tendo assim b elevado na primeira potencia. e assim por diante.
+ 45   16 133   STA 133
+ 47   32 134   LDA 134
+ 49   48 139   ADD 139  // decrementando a variavel auxiliar da multiplicação, que controla se o numero sera somado por ele mesmo de novo ou não.
+ 51   16 134   STA 134
+ 53  128  35   JMP 35 // caso seja efetuada a multiplicação, ele volta para o condicional para entrar a multiplicação de novo, dependendo do 
+ 55   32 133   LDA 133     auxiliar da potencia.
+ 57   16 131   STA 131
+ 59   32 132   LDA 132      // aqui, eu manejo os resultados e testo para ver se a variável auxiliar onde eu guardei a potência é maior ou 
+ 61   16 130   STA 130           igual a n. se for, eu paro e coloco o contador auxiliar da potencia (expoente) na variavel x.
+ 63   32 128   LDA 128
+ 65   96       NOT
+ 66   48 131   ADD 131
+ 68   48 138   ADD 138   
+ 70  144  73   JN  73    // caso o resultado da potencia for menor que n, eu incremento o auxiliar da potencia em 1 e subo de volta para fazer tudo de novo.
+ 72  240       HLT
+ 73   32 132   LDA 132
+ 75   48 138   ADD 138
+ 77   16 132   STA 132
+ 79  128  21   JMP 21 // subindo de volta para fazer tudo de novo
+ 81    0       NOP
+ 82    0       NOP
+ 83    0       NOP
+ 84    0       NOP
+ 85    0       NOP
+ 86    0       NOP
+ 87    0       NOP
+ 88    0       NOP
+ 89    0       NOP
+ 90    0       NOP
+ 91    0       NOP
+ 92    0       NOP
+ 93    0       NOP
+ 94    0       NOP
+ 95    0       NOP
+ 96    0       NOP
+ 97    0       NOP
+ 98    0       NOP
+ 99    0       NOP
+100    0       NOP
+101    0       NOP
+102    0       NOP
+103    0       NOP
+104    0       NOP
+105    0       NOP
+106    0       NOP
+107    0       NOP
+108    0       NOP
+109    0       NOP
+110    0       NOP
+111    0       NOP
+112    0       NOP
+113    0       NOP
+114    0       NOP
+115    0       NOP
+116    0       NOP
+117    0       NOP
+118    0       NOP
+119    0       NOP
+120    0       NOP
+121    0       NOP
+122    0       NOP
+123    0       NOP
+124    0       NOP
+125    0       NOP
+126    0       NOP
+127    0       NOP
+
+128   30      //n
+129    6      //b
+130    2      //x
+131   36      //potencia
+132    2      //aux potencia (pode ser entendido como contador)
+133   36      //multiplicacao
+134    0      //aux multiplicação (pode ser entendido como contador)
+135    0      
+136    0      
+137    0      
+138    1      //constante 1
+139  255      //constante -1
+140    0      //constante 0
+141    0      
+142    0      
+143    0      
+144    0      
+145    0      
+146    0      
+147    0      
+148    0      
+149    0      
+150    0      
+151    0      
+152    0      
+153    0      
+154    0      
+155    0      
+156    0      
+157    0      
+158    0      
+159    0      
+160    0      
+161    0      
+162    0      
+163    0      
+164    0      
+165    0      
+166    0      
+167    0      
+168    0      
+169    0      
+170    0      
+171    0      
+172    0      
+173    0      
+174    0      
+175    0      
+176    0      
+177    0      
+178    0      
+179    0      
+180    0      
+181    0      
+182    0      
+183    0      
+184    0      
+185    0      
+186    0      
+187    0      
+188    0      
+189    0      
+190    0      
+191    0      
+192    0      
+193    0      
+194    0      
+195    0      
+196    0      
+197    0      
+198    0      
+199    0      
+200    0      
+201    0      
+202    0      
+203    0      
+204    0      
+205    0      
+206    0      
+207    0      
+208    0      
+209    0      
+210    0      
+211    0      
+212    0      
+213    0      
+214    0      
+215    0      
+216    0      
+217    0      
+218    0      
+219    0      
+220    0      
+221    0      
+222    0      
+223    0      
+224    0      
+225    0      
+226    0      
+227    0      
+228    0      
+229    0      
+230    0      
+231    0      
+232    0      
+233    0      
+234    0      
+235    0      
+236    0      
+237    0      
+238    0      
+239    0      
+240    0      
+241    0      
+242    0      
+243    0      
+244    0      
+245    0      
+246    0      
+247    0      
+248    0      
+249    0      
+250    0      
+251    0      
+252    0      
+253    0      
+254    0      
+255    0      
